@@ -1,0 +1,182 @@
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-light-grey: #f0f0f0;
+  --color-grey: #808080;
+  --color-light-blue: #99dbf5;
+  --color-dark-blue: #3c486b;
+  --color-green: #98d8aa;
+  --color-yellow: #f3e99f;
+  --color-red: #ff6d60;
+
+  --border-radius: 7px;
+  --card-height: 40px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+header {
+  padding: 20px 0;
+  text-align: center;
+  background-color: var(--color-light-blue);
+  color: var(--color-white);
+}
+
+h1 {
+  font-size: 64px;
+}
+
+main {
+  display: flex;
+  color: var(--color-dark-blue);
+}
+
+#sidebar {
+  height: 90vh;
+  width: 300px;
+  background-color: var(--color-light-grey);
+  padding: 20px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+.home-section > *,
+.project-section > * {
+  margin: 10px 0;
+}
+
+button {
+  display: block;
+  width: 100%;
+  height: var(--card-height);
+  font-size: 18px;
+  color: var(--color-dark-blue);
+  background-color: var(--color-white);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color-dark-blue);
+  color: var(--color-white);
+}
+
+.new-project-btn,
+.new-project-name {
+  display: flex;
+}
+
+.side,
+.priority {
+  width: 20px;
+  height: var(--card-height);
+  background-color: var(--color-dark-blue);
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+
+.add-task .side {
+  margin-right: 10px;
+}
+
+input[type="text"] {
+  text-align: center;
+  height: var(--card-height);
+  width: 100%;
+  border: none;
+  font: inherit;
+  color: var(--color-dark-blue);
+  margin-bottom: 10px;
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+input:focus {
+  outline-color: var(--color-dark-blue);
+}
+
+.add-project {
+  background-color: var(--color-green);
+  color: var(--color-white);
+  margin-right: 30px;
+}
+
+.cancel-project {
+  background-color: var(--color-red);
+  color: var(--color-white);
+}
+
+#content {
+  width: 100%;
+  padding: 50px;
+}
+
+.project-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.task-list > * {
+  margin-bottom: 10px;
+}
+
+.add-task {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 40px;
+  background-color: var(--color-light-grey);
+  border-radius: var(--border-radius);
+}
+
+.add-task:hover {
+  cursor: pointer;
+}
+
+.task-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  background-color: var(--color-light-grey);
+  border-radius: var(--border-radius);
+}
+
+.left > *,
+.right > * {
+  margin-right: 10px;
+}
+
+.left,
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.active {
+  background-color: var(--color-light-blue);
+  color: var(--color-white);
+}
+
+.active:hover {
+  cursor: default;
+  background-color: var(--color-light-blue);
+  color: var(--color-white);
+}
+
+.hidden {
+  display: none;
+}

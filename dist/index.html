@@ -1,11 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <header>
+        <h1>Todo List</h1>
+    </header>
+    <main>
+        <div id="sidebar">
+            <div class="home-section">
+                <h3 class="home-title">Home</h3>
+                <button class="all-btn active">All</button>
+                <button class="today-btn">Today</button>
+                <button class="week-btn">Week</button>
+                <button class="important-btn">Important</button>
+            </div>
+            <div class="project-section">
+                <h3 class="add-project-title">Projects</h3>
+                <button class="add-project-btn">+ Add Project</button>
+            </div>
+            <div class="new-project hidden">
+                <div class="new-project-name">
+                    <div class="side"></div>
+                    <input type="text" name="project-name" id="project-name" placeholder="Enter Project Name">
+                </div>
+                <div class="new-project-btn">
+                    <button class="add-project">Add</button>
+                    <button class="cancel-project">Cancel</button>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <h3 class="project-title">All</h3>
+            <div class="task-list">
+                <div class="add-task">
+                    <div class="side"></div>
+                    <p>+ Add Task</p>
+                </div>
+                <div class="task-card new-task">
+                    <div class="left">
+                        <div class="priority"></div>
+                        <input type="checkbox" name="checkbox" id="checkbox">
+                        <p class="task-title">Task #1</p>
+                    </div>
+                    <div class="right">
+                        <input type="date" name="due-date" id="due-date">
+                        <p class="remove-task">X</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
     <script src="main.js"></script>
 </body>
+
 </html>
