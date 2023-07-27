@@ -6,11 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <header>
         <h1>Todo List</h1>
+        <div class="icon-bar">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </header>
     <main>
         <div id="sidebar">
@@ -41,7 +47,7 @@
             <div class="task-list">
                 <div class="add-task">
                     <div class="side"></div>
-                    <p>+ Add Task</p>
+                    <p class="task-title">+ Add Task</p>
                 </div>
                 <div class="task-card new-task">
                     <div class="left">
@@ -50,7 +56,7 @@
                         <p class="task-title">Task #1</p>
                     </div>
                     <div class="right">
-                        <input type="date" name="due-date" id="due-date">
+                        <p class="due-date">Due Date</p>
                         <p class="remove-task">X</p>
                     </div>
                 </div>
