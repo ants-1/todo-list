@@ -19,7 +19,7 @@
         </div>
     </header>
     <main>
-        <div id="sidebar">
+        <div id="sidebar" class="hidden">
             <div class="home-section">
                 <h3 class="home-title">Home</h3>
                 <button class="all-btn active">All</button>
@@ -37,8 +37,8 @@
                     <input type="text" name="project-name" id="project-name" placeholder="Enter Project Name">
                 </div>
                 <div class="new-project-btn">
-                    <button class="add-project">Add</button>
-                    <button class="cancel-project">Cancel</button>
+                    <button class="add add-project">Add</button>
+                    <button class="cancel cancel-project">Cancel</button>
                 </div>
             </div>
         </div>
@@ -49,15 +49,24 @@
                     <div class="side"></div>
                     <p class="task-title">+ Add Task</p>
                 </div>
-                <div class="task-card new-task">
-                    <div class="left">
-                        <div class="priority"></div>
-                        <input type="checkbox" name="checkbox" id="checkbox">
-                        <p class="task-title">Task #1</p>
-                    </div>
-                    <div class="right">
-                        <p class="due-date">Due Date</p>
-                        <p class="remove-task">X</p>
+                <div class="add-new-task">
+                    <h3 class="add-task-title">Add Task</h3>
+                    <div class="container">
+                        <label for="new-task-title">
+                            <span>Title</span>
+                            <input type="text" name="new-task-title" id="new-task-title">
+                        </label>
+    
+                        <label for="new-task-date">
+                            <span>Due Date</span>
+                            <div class="date-input">
+                                <input type="date" name="new-task-date" id="new-task-date">
+                            </div>
+                        </label>
+                        <div class="new-task-btn">
+                            <button class="add add-task-btn">Add</button>
+                            <button class="cancel cancel-task-btn">Cancel</button>
+                        </div>
                     </div>
                 </div>
             </div>
