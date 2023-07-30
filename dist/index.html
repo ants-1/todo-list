@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -19,7 +18,7 @@
         </div>
     </header>
     <main>
-        <div id="sidebar" class="hidden">
+        <div id="sidebar">
             <div class="home-section">
                 <h3 class="home-title">Home</h3>
                 <button class="all-btn active">All</button>
@@ -29,7 +28,9 @@
             </div>
             <div class="project-section">
                 <h3 class="add-project-title">Projects</h3>
-                <button class="add-project-btn">+ Add Project</button>
+                <div class="project-list">
+                    <button class="add-project-btn">+ Add Project</button>
+                </div>
             </div>
             <div class="new-project hidden">
                 <div class="new-project-name">
@@ -49,29 +50,45 @@
                     <div class="side"></div>
                     <p class="task-title">+ Add Task</p>
                 </div>
-                <div class="add-new-task">
-                    <h3 class="add-task-title">Add Task</h3>
-                    <div class="container">
-                        <label for="new-task-title">
-                            <span>Title</span>
-                            <input type="text" name="new-task-title" id="new-task-title">
-                        </label>
-    
-                        <label for="new-task-date">
-                            <span>Due Date</span>
-                            <div class="date-input">
-                                <input type="date" name="new-task-date" id="new-task-date">
-                            </div>
-                        </label>
-                        <div class="new-task-btn">
-                            <button class="add add-task-btn">Add</button>
-                            <button class="cancel cancel-task-btn">Cancel</button>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </main>
+    <div id="overlay">
+        <div class="add-new-task">
+            <h3 class="add-task-title">Add Task</h3>
+            <div class="container">
+                <label for="new-task-title">
+                    <span>Title</span>
+                    <div class="title-input">
+                        <input type="text" name="new-task-title" id="new-task-title">
+                    </div>
+                </label>
+                <div class="input-container">
+                    <label for="new-task-date">
+                        <span>Due Date</span>
+                        <div class="date-input">
+                            <input type="date" name="new-task-date" id="new-task-date">
+                        </div>
+                    </label>
+                    <label for="new-task-priority">
+                        <span>Priority</span>
+                        <div class="priority-input">
+                            <select name="priority" id="new-task-priority">
+                                <option value="none">None</option>
+                                <option value="high">High</option>
+                                <option value="mid">Mid</option>
+                                <option value="low">Low</option>
+                            </select>
+                        </div>
+                    </label>
+                </div>
+                <div class="new-task-btn">
+                    <button class="add add-task-btn">Add</button>
+                    <button class="cancel cancel-task-btn">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
 
